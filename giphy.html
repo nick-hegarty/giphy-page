@@ -50,7 +50,7 @@
           method: "GET"
         }).done(function(response) {
 
-          var giphDiv = $("<div class='movie'>");
+          var giphDiv = $("<div class='gif'>");
 
        
           var image = $("<img>").attr("src", imgURL);
@@ -59,7 +59,7 @@
           gifDiv.append(image);
 
           
-          $("#gifs-view").prepend(giphDiv);
+          $("#gifs-view").prepend(gifDiv);
         });
 
       }
@@ -80,12 +80,12 @@
         event.preventDefault();
         var giph = $("#gif-input").val().trim();
 
-        mgifs.push(movie);
+        mgifs.push(gifs);
 
         renderButtons();
       });
 
-      $(document).on("click", ".movie", displayGiphInfo);
+      $(document).on("click", ".gif", displayGiphInfo);
 
       renderButtons();
     </script>
